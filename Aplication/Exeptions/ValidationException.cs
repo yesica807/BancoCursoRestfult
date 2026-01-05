@@ -3,9 +3,9 @@
 namespace Exeptions
 {
     [Serializable]
-    internal class ValidationException : Exception
+    public class ValidationException : Exception
     {
-        private List<ValidationFailure> failures;
+        public List<ValidationFailure> Failures { get; set; } = new List<ValidationFailure>();
 
         public ValidationException()
         {
@@ -13,7 +13,7 @@ namespace Exeptions
 
         public ValidationException(List<ValidationFailure> failures)
         {
-            this.failures = failures;
+            Failures = failures;
         }
 
         public ValidationException(string? message) : base(message)

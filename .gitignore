@@ -1,0 +1,15 @@
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.pdb
+*.dll
+*.exe
+*.cache
+*.json
+!appsettings.json
+!appsettings.Development.json
+!launchSettings.json

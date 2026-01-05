@@ -10,23 +10,28 @@ namespace Aplication.Wrappers
     {
         public Response()
         {
-
+            Errors = new List<string>();
+            Message = string.Empty;
         }
-        public Response(T data, string message = null)
+        
+        public Response(T data, string? message = null)
         {
-            succeded = true;
-            message = message;
-            Data = Data;
+            Succeeded = true;
+            Message = message ?? string.Empty;
+            Data = data;
+            Errors = new List<string>();
         }
+        
         public Response(string message)
         {
-            succeded = false;
-            message = message;
+            Succeeded = false;
+            Message = message;
+            Errors = new List<string>();
         }
-        public bool succeded { get; set; }
-        public string message { get; set; }
+        
+        public bool Succeeded { get; set; }
+        public string Message { get; set; }
         public List<string> Errors { get; set; }
-        public T Data { get; set; }
-
+        public T Data { get; set; } = default!;
     }
 }
