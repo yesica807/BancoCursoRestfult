@@ -17,7 +17,7 @@ namespace Aplication.Feautres.Clientes.Commands.CreateClienteCommand
     }
     public class CreateClienteCommandHandler : IRequestHandler<CreateClienteCommand, Response<int>>
     {
-        public async Task<Response<int>> Handle(CreateClienteCommand request, CancellationToken cancellationToken)
+        public Task<Response<int>> Handle(CreateClienteCommand request, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
